@@ -53,44 +53,48 @@
         
         <section id="contact-page">
             <div class="container">
-                <div class="center">        
-                    <p class="lead-contactus">
-                        Адрес: <span><b>бул. 6-ти Септември № 146</b><br></span>
-                        Град: <span><b>Пловдив</b><br></span>
-                        Телефон: <span><b>032 123 543</b></span><br>
-                        Имейл: <span><b>nota229@abv.bg</b></span>
-                    </p> <br>
-                    <h2>Изпратете ни съобщение</h2>
-                    <h6>Полетата с символ "*" са задължителни.</h6>
+                <div class="center">   
+                    <div class="center wow fadeInDown">    
+                        <p class="lead-contactus">
+                            Адрес: <span><b>бул. 6-ти Септември № 146</b><br></span>
+                            Град: <span><b>Пловдив</b><br></span>
+                            Телефон: <span><b>032 123 543</b></span><br>
+                            Имейл: <span><b>nota229@abv.bg</b></span>
+                        </p> <br>
+                        <h2>Изпратете ни съобщение</h2>
+                        <h6>Полетата с символ "*" са задължителни.</h6>
+                    </div>
                 </div> 
                 <div class="row contact-wrap"> 
-                    <div class="status alert alert-success" style="display: none"></div>
+
                     <form class="contact-form" name="contact-form" method="post" action="form-to-email.php">
-                        <div class="col-sm-5 col-sm-offset-1">
-                            <div class="form-group">
-                                <label for="name">Име *</label>
-                                <input type="text" name="name" class="form-control">
+                        <div class="center wow fadeInDown"> 
+                            <div class="col-sm-5 col-sm-offset-1">
+                                <div class="form-group">
+                                    <label for="name">Име *</label>
+                                    <input type="text" name="name" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Емейл *</label>
+                                    <input type="text" name="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Телефон</label>
+                                    <input type="number" name="phone" class="form-control">
+                                </div>                       
                             </div>
-                            <div class="form-group">
-                                <label for="email">Емейл *</label>
-                                <input type="text" name="email" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Телефон</label>
-                                <input type="number" name="phone" class="form-control">
-                            </div>                       
-                        </div>
-                        <div class="col-sm-5">
-                            <div class="form-group">
-                                <label for="subject">Предмет *</label>
-                                <input type="text" name="subject" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Съобщение *</label>
-                                <textarea name="message" id="message" class="form-control" rows="6"></textarea>
-                            </div>                     
-                            <div class="form-group">
-                                <button type="submit" name="submit" class="btn btn-primary btn-lg">Изпратете съобщението</button>
+                            <div class="col-sm-5">
+                                <div class="form-group">
+                                    <label for="subject">Предмет *</label>
+                                    <input type="text" name="subject" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Съобщение *</label>
+                                    <textarea name="message" id="message" class="form-control" rows="6"></textarea>
+                                </div>                     
+                                <div class="form-group">
+                                    <button type="submit" name="submit" class="btn btn-primary btn-lg">Изпратете съобщението</button>
+                                </div>
                             </div>
                         </div>
                     </form> 
