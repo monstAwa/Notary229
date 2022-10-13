@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контакти</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">      
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	 <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->      
+    <script language="JavaScript" src="scripts/gen_validatorv4.js" type="text/javascript"></script>
+    
+  </head>
+  <body class="homepage">   
+	<header id="header">
+        <nav class="navbar navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Нотариус №229</a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Начална страница</a></li>
+                        <li><a href="about-us.html">Екип</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li class="active"><a href="contact-us.html">Контакти</a></li>                        
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+		
+    </header><!--/header-->
+		
+	<div class="map">
+		<iframe style="filter: invert(90%);" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d879.4118269384085!2d24.744765512643227!3d42.15077875528189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1bdc6abb2e7%3A0x4cd12dc67f930c7a!2z0J3QntCi0JDQoNCY0KPQoSDQndCV0JTQldCb0JrQkCDQpdCQ0JTQltCY0KHQotCQ0JLQoNCV0JLQkC3QodCi0J7QmdCa0J7QktCQICgyMjkp!5e0!3m2!1sbg!2sbg!4v1513778676709" frameborder="0" style="border:0" allowfullscreen>
+		</iframe>
+	</div>
+	
+	<section id="contact-page">
+        <div class="container">
+            <div class="center">        
+                <p class="lead-contactus">
+                    Адрес: <span><b>бул. 6-ти Септември № 146</b><br></span>
+                    Град: <span><b>Пловдив</b><br></span>
+                    Телефон: <span><b>032 123 543</b></span><br>
+                    Имейл: <span><b>nota229@abv.bg</b></span>
+                </p> <br>
+                <h2>Изпратете ни съобщение</h2>
+                <h6>Полетата с символ "*" са задължителни.</h6>
+            </div> 
+            <div class="row contact-wrap"> 
+                <div class="status alert alert-success" style="display: none"></div>
+                <form class="contact-form" name="contact-form" method="post" action="form-to-email.php">
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <div class="form-group">
+                            <label for="name">Име *</label>
+			                <input type="text" name="name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Емейл *</label>
+			                <input type="text" name="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+			                <input type="number" name="phone" class="form-control">
+                        </div>                       
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <label for="subject">Предмет *</label>
+			                <input type="text" name="subject" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Съобщение *</label>
+			                <textarea name="message" id="message" class="form-control" rows="6"></textarea>
+                        </div>                     
+                        <div class="form-group">
+                            <button type="submit" name="submit" class="btn btn-primary btn-lg">Изпратете съобщението</button>
+                        </div>
+                    </div>
+                </form> 
+
+                <script language="JavaScript">
+                    // Code for validating the form
+                    // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+                    // for details
+                    var frmvalidator  = new Validator("contact-form");
+                    frmvalidator.addValidation("name","req","МОЛЯ, НАПИШЕТЕ ВАШЕТО ИМЕ."); 
+                    frmvalidator.addValidation("email","req","ПОЛЕТО ЗА ИМЕЙЛ НЕ ТРЯБВА ДА БЪДЕ ПРАЗНО."); 
+                    frmvalidator.addValidation("email","email","МОЛЯ, НАПИШЕТЕ ВАЛИДЕН ИМЕЙЛ."); 
+                    frmvalidator.addValidation("subject","req","МОЛЯ, НАПИШЕТЕ ПРЕДМЕТ НА СЪОБЩЕНИЕТО."); 
+                    frmvalidator.addValidation("message","req","МОЛЯ, НАПИШЕТЕ ВАШЕТО СЪОБЩЕНИЕ."); 
+                    </script>
+
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#contact-page-->
+
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Нотариус №229</h3>
+                        <ul>
+                            <li><a href="index.html">Начало</a></li>
+                            <li><a href="about-us.html">Запознайте се с екипа</a></li>
+                            <li><a href="services.html">Услуги и мнения</a></li>
+                            <li><a href="contact-us.html">Контакти</a></li>                     
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+	
+	<div class="top-bar">
+		<div class="container">
+			<div class="row">
+			    <div class="col-lg-12">
+				   <div class="social">
+						<ul class="social-share">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+							<li><a href="#"><i class="fa fa-skype"></i></a></li>
+						</ul>
+				   </div>
+                </div>
+			</div>
+		</div><!--/.container-->
+	</div><!--/.top-bar-->
+	
+	<footer id="footer" class="midnight-blue">
+       
+    </footer><!--/#footer-->
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>   
+    <script src="js/wow.min.js"></script>
+	<script src="js/main.js"></script>
+  </body>
+</html>
