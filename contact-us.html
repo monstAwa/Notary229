@@ -70,7 +70,7 @@
                     </div>
                 </div> 
                 <div class="row contact-wrap"> 
-                    <form class="contact-form" name="contact-form" method="post" action="form-to-email.php">
+                    <form class="contact-form" name="contact-form" id="myForm" method="post" action="form-to-email.php">
                         <div class="center wow fadeInDown"> 
                             <div class="col-sm-5 col-sm-offset-1">
                                 <div class="form-group">
@@ -96,12 +96,12 @@
                                     <textarea name="message" id="message" class="form-control" rows="6"></textarea>
                                 </div>                     
                                 <div class="form-group">
-                                    <button type="submit" name="submit" class="btn btn-primary btn-lg">Изпратете съобщението</button>
+                                    <button type="submit" onclick="sendEmail()" name="submit" class="btn btn-primary btn-lg">Изпратете съобщението</button>
                                 </div>
                             </div>
                         </div>
                     </form> 
-
+                        
                     <script>
                         // Code for validating the form
                         // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
@@ -147,5 +147,9 @@
         <script src="js/jquery.isotope.min.js"></script>   
         <script src="js/wow.min.js"></script>
         <script src="js/main.js"></script>
+        
+        <!--Function to check the form and style it-->
+        <script src="js/form.check.js"></script>
+
     </body>
 </html>
