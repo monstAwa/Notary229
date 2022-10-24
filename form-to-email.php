@@ -1,5 +1,4 @@
 <?php
-
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\SMTP;
   use PHPMailer\PHPMailer\Exception;
@@ -13,20 +12,20 @@
   $message = $_POST['message'];
   $subject = $_POST['subject'];
   $phone = $_POST['phone'];
-
+  //When sending is successfull redirect
+  header("Location: sent.html");
   //Preparing mail content
-  $messagecontent = "Име: <b>$name</b>" . 
-            "<br><br>Телефон: <b>$phone</b>" . 
-            "<br><br>Основание: <b>$subject</b>" . 
-            "<br><br>Съобщение: <b>$message</b>" . 
-            "<br><br>Имейл: <b>$visitor_email </b><br>";
-
+  $messagecontent = "<span style='color:red; font-size:14px'>Име: </span> <br><span style='font-size:16px'><b>$name</b></span>" . 
+            "<br><br><span style='color:red; font-size:14px'>Телефон: </span> <br><span style='font-size:16px'><b>$phone</b></span>" . 
+            "<br><br><span style='color:red; font-size:14px'>Основание: </span> <br><span style='font-size:16px'><b>$subject</b></span>" . 
+            "<br><br><span style='color:red; font-size:14px'>Съобщение: </span> <br><span style='font-size:16px'><b>$message</b></span>" . 
+            "<br><br><span style='color:red; font-size:14px'>Имейл: </span> <br><span style='font-size:16px'><b>$visitor_email </b></span><br>";
   //Create an instance; passing `true` enables exceptions
   $mail = new PHPMailer(true);
   $mail->CharSet = 'UTF-8';
   try {
+    
     //Server settings
-
     //Line for debugging if needed
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
@@ -46,14 +45,13 @@
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = "Съобщение от сайта: " . $subject;   //subject of the send email
-    $mail->Body    = $messagecontent;                     //Content message of the send email
-      
+    $mail->Body    = $messagecontent;              //Content message of the send email
+    
     $mail->send();
-    header("Location: sent.html");
   }
   catch (Exception $e) 
   {
     header("Location: not-sent.html");
     //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
-?> 
+?>

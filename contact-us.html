@@ -76,25 +76,25 @@
                             <div class="col-sm-5 col-sm-offset-1">
                                 <div class="form-group">
                                     <label for="name">Име *</label>
-                                    <input type="text" id="name" name="name" class="form-control">
+                                    <input type="text" maxlength="50" id="name" name="name" class="form-control" placeholder="Въведете име и фамилия">
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Емейл *</label>
-                                    <input type="text" id="email" name="email" class="form-control">
+                                    <label for="email">Имейл *</label>
+                                    <input type="text" maxlength="50" id="email" name="email" class="form-control" placeholder="Въведете вашият имейл.">
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Телефон</label>
-                                    <input type="number" id="phone" name="phone" class="form-control">
+                                    <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==25) return false;" id="phone" name="phone" class="form-control" placeholder="Въведете вашият телефон">
                                 </div>                       
                             </div>
                             <div class="col-sm-5">
                                 <div class="form-group">
                                     <label for="subject">Предмет *</label>
-                                    <input type="text" id="subject" name="subject" class="form-control">
+                                    <input type="text" maxlength="70" id="subject" name="subject" class="form-control" placeholder="Напишете кратко описание на въпроса/съобщението">
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Съобщение *</label>
-                                    <textarea name="message" id="message" class="form-control" rows="6"></textarea>
+                                    <textarea maxlength="1000" name="message" id="message" class="form-control" rows="6" placeholder="Напишете вашето съобщеноие/въпрос"></textarea>
                                 </div>                     
                                 <div class="form-group">
                                     <button type="submit" onclick="sendEmail()" name="submit" class="btn btn-primary btn-lg">Изпратете съобщението</button>
